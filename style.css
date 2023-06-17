@@ -1,0 +1,49 @@
+.body {
+    background:url('img_gif/bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.glass_Background {
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: saturate(180%) blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+   
+    
+}
+.prize_Box {
+    height: 100px;
+    width: 120px;
+    z-index: -99999;
+    
+}
+.error_Msg {
+    color: red;
+}
+
+.table {
+    border-collapse: collapse;
+    margin-top: 0;
+    border-radius: 2rem;
+}
+.table thead {
+    position: sticky;
+    top: 0;
+    background:white;
+    border: solid #ccc;
+}
+.table th, 
+.table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+}
+.table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+.table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+.table_container {
+    height: 200px;
+    overflow-y: auto;
+}

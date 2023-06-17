@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ዲጂታል እቁብ</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body class="body ">
+    <!-- Navigation bar start-->
+    <!--
+    <header class="m-3 ">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">ዲጂታል-እቁብ</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Dropdown
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link disabled">Disabled</a>
+                  </li>
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+    </header>
+ Navigation bar Ends -->
+
+    <!--Date and Time-->
+<div class="container card col-12 mb-3 mt-3 glass_Background">
+    <div class="card-body glass_Background"> 
+        <div class="row text-center h2 p-0 glass_Background">
+        ዲጂታል እቁብ
+          <div class="col-6 p-0 glass_Background">
+            <h5 id="time"></h5>
+            <h5 id="date"></h5>
+            </div>
+            <div class="row col align-selfe-end">
+              <h5>አዲስ አበባ, ኢትዮፒያ, 4ኪሎ</h5>
+            </div>
+        </div>
+        
+    </div>
+</div>
+<!-- Main body Strats here-->
+    <div class="container card col-12 wrapper">
+        <div class="row">
+          <div class="col-md-6">
+            <h2 class="text-center">እዚህ ይመዝገቡ </h2>
+            <form class="form_class">
+              <div class="form-group">
+                <label for="fullname">ሙሉ ስም :</label>
+                <span id="error_MsgName" class="error_Msg"></span>
+                <input type="text" class="form-control" id="fullname" placeholder="ሙሉ ስሞን ያስገቡ ">
+              </div>
+              <div class="form-group">
+                <label for="age">እድሜ :</label>
+                <span id="error_MsgAge" class="error_Msg"></span>
+                <input type="age" class="form-control" id="age" placeholder="እድማዎትን ያስገቡ">
+              </div>
+              <div class="form-group">
+                <label for="phone">ስልክ ቁጥር :</label>
+                <span class="error_Msg" id="error_MsgPhone"></span>
+                <input type="phone" class="form-control" id="phone" placeholder="ስልክ ቁጥሮን ያስገቡ ">
+              </div>
+              <div class="form-group">
+                <label for="address">አድራሻ :</label>
+                <span class="error_Msg" id="error_MsgAddress"></span>
+                <input class="form-control" id="address" type="address" placeholder="አድራሻዎትን ያስገቡ"></input>
+              </div>
+              <div class="form-group mt-3">
+                <label for="amount">የገንዘብ መጠን :</label>
+              <span class="error_Msg" id="error_MsgAmount"></span>
+                <div class="btn-group ms-3 " role="group" aria-label="Amount Buttons">
+                  <input type="checkbox" name="birr_option" id="birr_Amount" class="form-check-input" data-amount="100">100 ብር</input>
+                  <input type="checkbox" name="birr_option" id="birr_Amount" class="form-check-input ms-3" data-amount="500">500 ብር</input>
+                  <input type="checkbox" name="birr_option" id="birr_Amount" class="form-check-input ms-3" data-amount="1000">1000 ብር</input>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="customAmountCheck">
+                    <label class="form-check-label" for="customAmountCheck">ራስ ሞል</label>
+                  </div>
+                <input type="number" class="form-control mt-2" id="customAmountInput" placeholder="የገንዘብ መጠኑን ይፃፉ"
+                  >
+              </div>
+              <button type="button" id="submit_btn" class="btn btn-primary mt-2 mb-3">መዝግብ</button>
+            </form>
+          </div>
+          <div class="col-md-6">
+            <div class="text-center ">
+                <h2>መዝገብ</h2>
+            </div>
+            
+            <div class="table_container card-body mt-0">
+                <table id="users_Table" class="table">
+                    <thead class="thead">
+                        <tr>
+                            <th>ሙሉ ስም</th>
+                            <th>እድማ</th>
+                            <th>ስልክ ቁጥር</th>
+                            <th>አድራሻ</th>
+                            <th>የገንዘብ መጠን</th>
+                        </tr>
+                    </thead>
+                    <tbody class="tbody">
+
+                    </tbody>
+                </table>
+            </div>
+            <h2 class="text-center">አሸናፊ</h2>
+            <div id="winner" class="card">
+              <div class="card-body text-center" id="win_Bg">
+                <h5 class="card-title" id="winner_Name"></h5>
+               <!-- <img src="img_gif/boxf_img.jpg" alt="" class="prize_Box" id="gif_Box"> -->
+                <p class="card-text" id="winner_Amount"></p>
+              </div>
+            </div>
+            <button type="button" id="winner_btn" class="btn btn-primary mt-2 mb-3">ምረጥ</button>
+          </div>
+        </div>
+      </div>
+    
+</body>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+    
+</html>
